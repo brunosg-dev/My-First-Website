@@ -1,0 +1,28 @@
+h1 {
+  font-size:xx-large;
+  color: rgb(214, 214, 214);
+  text-align: center;
+}
+
+#modernparagraph {
+  background-color: #542222;        /* White background */
+  color: #333333;                   /* Dark gray text for readability */
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  font-size: 1.1rem;                /* Slightly larger than default */
+  line-height: 1.6;                 /* Comfortable line spacing */
+  padding: 20px;                    /* Space inside the paragraph */
+  border-radius: 12px;              /* Smooth rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 700px;                 /* Keeps paragraph width comfortable */
+  margin: 20px auto;                /* Centered with vertical spacing */
+  box-shadow: rgba(29, 41, 29, 9.5); /* Subtle shadow for depth */ 
+  color: white;               
+}
+
+body {
+  background-color: #361515;        /* Light gray background for the page */
+  font-family: 'Poppins', sans-serif; /* Consistent modern font */
+  color: #333333;                   /* Dark gray text for readability */
+  margin: 0;
+  padding: 0;
+}
