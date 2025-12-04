@@ -86,3 +86,13 @@ background-color: #542222;        /* White background */
   color: white;  
   text-align: center; 
 }
+
+/* Header Section Styles */
+.container {
+  display: flex; /*Turns the container into a flexbox for easier alignment */
+  flex-direction: column; /* Arranges elements vertically (top to bottom)*/
+  justify-content: center; /* Centers items vertically within the container*/
+  height: 100vh; /* Makes the container fill the full viewport height*/
+  width: 100vw; /* Makes the container span the full width of the viewport*/
+  
+}
