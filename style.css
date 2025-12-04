@@ -1,9 +1,11 @@
-h1 {
-  font-size:xx-large;
-  color: rgb(214, 214, 214);
-  text-align: center;
+/*Whole page background style*/
+body {
+  background-color: #384633;        /* Light gray background for the page */
+  font-family: 'Poppins', sans-serif; /* Consistent modern font */
+  margin: 0;
+  padding: 0;
 }
-
+/*NAVIGATION STYLES*/
 nav {
   position:fixed;
   top:0;
@@ -51,7 +53,7 @@ border-bottom: 2px solid #820c8d;
 
 #modernparagraph {
   background-color: #542222;        /* White background */
-  color: #333333;                   /* Dark gray text for readability */
+  color: #efe4e4;                   /* Dark gray text for readability */
   font-family: 'Poppins', sans-serif; /* Modern, clean font */
   font-size: 1.1rem;                /* Slightly larger than default */
   line-height: 1.6;                 /* Comfortable line spacing */
@@ -64,16 +66,10 @@ border-bottom: 2px solid #820c8d;
   color: white;               
 }
 
-body {
-  background-color: #361515;        /* Light gray background for the page */
-  font-family: 'Poppins', sans-serif; /* Consistent modern font */
-  color: #333333;                   /* Dark gray text for readability */
-  margin: 0;
-  padding: 0;
-}
-p2 i {
-background-color: #542222;        /* White background */
-  color: #333333;                   /* Dark gray text for readability */
+
+p2 {
+background-color: #ffffff;        /* White background */
+  color: #f0eaea;                   /* Dark gray text for readability */
   font-family: 'Poppins', sans-serif; /* Modern, clean font */
   font-size: 1.1rem;                /* Slightly larger than default */
   line-height: 1.6;                 /* Comfortable line spacing */
@@ -87,7 +83,7 @@ background-color: #542222;        /* White background */
   text-align: center; 
 }
 
-/* Header Section Styles */
+/* HEADER SECTION STULES */
 .container {
   display: flex; /*Turns the container into a flexbox for easier alignment */
   flex-direction: column; /* Arranges elements vertically (top to bottom)*/
@@ -103,4 +99,17 @@ background-color: #542222;        /* White background */
   background-repeat: no-repeat; /*Prevents the image from repeating */
   position: relative; /* Allows absolute postioning of inner elements if needed*/
 }
+/*Pseudo-element to add a dark background on the image*/
+.container::before {
+  
+}
 
+h1 {
+  font-size: 2.5rem;
+  color: #e6e6e6;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.4rem;
+  color: #b0b0b8;
+}
