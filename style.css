@@ -101,7 +101,14 @@ background-color: #ffffff;        /* White background */
 }
 /*Pseudo-element to add a dark background on the image*/
 .container::before {
-  
+  content: ; /*Creates a viritual element before .container's content*/
+  position: absolute; /* Position it relative to the nearest postioned parent */
+  top: 0; /* Stretches the element from the top edge*/
+  left: 0; /* Stretches it from the left edge*/
+  right: 0; /* Stretches it to the right edge*/
+  bottom: 0; /* Stretches it to the bootm edge*/
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black overlay */
+  z-index: 0;/* Places it behind other content (lower stacking order) */
 }
 
 h1 {
