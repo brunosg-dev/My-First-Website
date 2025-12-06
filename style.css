@@ -1,9 +1,7 @@
 /*Whole page background style*/
 body {
-  background-color: #384633;        /* Light gray background for the page */
-  font-family: 'Poppins', sans-serif; /* Consistent modern font */
-  margin: 0;
-  padding: 0;
+  background-color: rgba(36, 29, 29, 0.95);
+  font-family: "Montserrat", sans-serif; /* Consistent modern font */
 }
 /*NAVIGATION STYLES*/
 nav {
@@ -84,6 +82,15 @@ background-color: #ffffff;        /* White background */
 }
 
 /* HEADER SECTION STULES */
+h1 {
+  font-size: 2.5rem;
+  color: #e6e6e6;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.4rem;
+  color: #b0b0b8;
+}
 .container {
   display: flex; /*Turns the container into a flexbox for easier alignment */
   flex-direction: column; /* Arranges elements vertically (top to bottom)*/
@@ -112,16 +119,30 @@ background-color: #ffffff;        /* White background */
 }
 
 /*DISCOVERY (CHAPTER SECTION) */
-.chapter-section {
-  border: 10px outset #a7a7a7;
-  padding: 10px;
-}
-h1 {
-  font-size: 2.5rem;
-  color: #e6e6e6;
-  margin-bottom: 10px;
-}
-h2 {
+
+.h2-discovery{
   font-size: 1.4rem;
-  color: #b0b0b8;
+  color: #e6e6e6;
+}
+.chapter-section {
+  background-color: rgba(36, 29, 29, 0.95); /* Addsa light tranparent background box*/
+  border-radius: 8px; /* Rounds the corners of the box */
+  padding: 20px; /* Adds space inside the box */
+  margin: 80px auto; /* Adds space around and centers the box horizontally */
+  max-width: 800px; /*limits the box width to keep it readable on large screens*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+}
+.chapter-section h2 {
+  font-family: "Montserrat", sans-serif; /* Sets a clean modern font*/
+  font-size: 24px; /* Makes the title larger and more visible */
+  color: #e6e6e6 ; /* Uses a light gray color */
+  margin-bottom: 20px; /* Adds space below the title */
+  border-bottom: 2px solid #e6e6e6; /* Creates a line under the title for separation */
+  display: inline-block; /* Keeps the underline the same width as the text */
+}
+.chapter-section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #e6e6e6;
+  line-height: 1.6; /* Increases line spacing for better readability*/
 }
