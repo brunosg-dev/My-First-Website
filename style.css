@@ -37,6 +37,7 @@ nav ul {
   align-items: center;
 }
 
+
 /*the grandchid of the discendent selector*/
 
 nav li {
@@ -94,22 +95,24 @@ background-color: #ffffff;        /* White background */
 
 /* HEADER SECTION STYLES */
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   color: #e6e6e6;
+  margin-top: -40px; /* moves text up */
   margin-bottom: 10px;
 }
 h2 {
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  margin-top: 10px;
   color: #b0b0b8;
 }
 .container {
   display: flex; /*Turns the container into a flexbox for easier alignment */
   flex-direction: column; /* Arranges elements vertically (top to bottom)*/
   justify-content: center; /* Centers items vertically within the container*/
-  min-height: 100vh; /* Makes the container fill the full viewport height*/
+  min-height: 100svh; /* Makes the container fill the full viewport height*/
   width: 100%; /* Makes the container span the full width of the viewport*/
   text-align: center; /* Center the text horizontally*/
-  padding: 6rem; /*adds space inside the container on all sides */
+  padding: 2rem 1rem; /*adds space inside the container on all sides */
   padding-top: 10px; /* Adds extra space at the top of th econtainer*/
   background-image: url("images/nexus6.png"); /* Sets the background image*/
   background-size: cover; /*Makes the image cover the whole container*/
@@ -119,7 +122,7 @@ h2 {
 }
 /*Pseudo-element to add a dark background on the image*/
 .container::before {
-  content: ; /*Creates a viritual element before .container's content*/
+  content: ""; /*Creates a virtual element before .container's content*/
   position: absolute; /* Position it relative to the nearest postioned parent */
   top: 0; /* Stretches the element from the top edge*/
   left: 0; /* Stretches it from the left edge*/
@@ -128,6 +131,12 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black overlay */
   z-index: 0;/* Places it behind other content (lower stacking order) */
 }
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 /*DISCOVERY (CHAPTER SECTION) */
 
@@ -205,4 +214,40 @@ footer {
 
 .footer-social a:hover {
   color: #23f75b;;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) { 
+/* Apply the styles below only on small screens (mobile) */
+
+  nav ul {
+    flex-wrap: wrap; 
+    /* Allows menu items to go to a new line instead of overflowing */
+    
+    gap: 10px; 
+    /* Adds space between menu items on small screens */
+  }
+
+  nav a {
+    font-size: 14px; 
+    /* Makes navigation text smaller to fit mobile screens */
+    
+    padding: 8px; 
+    /* Reduces spacing so links don’t feel too big on mobile */
+  }
+
+  .container {
+    padding: 4rem 1rem 2rem; 
+    /* Reduces horizontal padding to prevent overflow on mobile */
+  }
+
+  #modernparagraph,
+  .chapter-section {
+    margin: 20px 1rem; 
+    /* Adds safe side spacing so content doesn’t touch screen edges */
+    
+    max-width: 100%; 
+    /* Forces sections to fit within the mobile screen width */
+  }
 }
