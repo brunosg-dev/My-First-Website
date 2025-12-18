@@ -100,7 +100,7 @@ h2 {
   text-align: center; /* Center the text horizontally*/
   padding: 2rem; /*adds space inside the container on all sides */
   padding-top: 60px; /* Adds extra space at the top of th econtainer*/
-  background-image: url(images/hero.jpg); /* Sets the background image*/
+  background-image: url(images/hero.jpg); width: 100dvw; /* Sets the background image*/
   background-size: cover; /*Makes the image cover the whole container*/
   background-position: center center; /*Keeps the image centered both ways*/
   background-repeat: no-repeat; /*Prevents the image from repeating */
