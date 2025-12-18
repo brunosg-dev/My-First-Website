@@ -216,8 +216,8 @@ footer {
   color: #23f75b;;
 }
 
-/* Mobile responsiveness */
 
+/* Mobile responsiveness for navigation and containers */
 @media (max-width: 768px) { 
 /* Apply the styles below only on small screens (mobile) */
 
@@ -249,5 +249,45 @@ footer {
     
     max-width: 100%; 
     /* Forces sections to fit within the mobile screen width */
+  }
+}
+
+
+/* Mobile responsiveness for footer */
+@media (max-width: 768px) {
+
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    flex-direction: column; 
+    /* Stack links vertically on mobile */
+    
+    gap: 12px;
+    /* Space between links */
+    
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    /* Slightly smaller text for mobile */
+  }
+
+  .footer-content p {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-social a {
+    font-size: 22px;
+    margin: 0 12px;
+    /* Give icons breathing room */
   }
 }
