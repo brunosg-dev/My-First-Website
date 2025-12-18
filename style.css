@@ -3,6 +3,17 @@ body {
   background-color: rgba(36, 29, 29, 0.95);
   font-family: "Montserrat", sans-serif; /* Consistent modern font */
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /*NAVIGATION STYLES*/
 nav {
   position:fixed;
@@ -95,12 +106,12 @@ h2 {
   display: flex; /*Turns the container into a flexbox for easier alignment */
   flex-direction: column; /* Arranges elements vertically (top to bottom)*/
   justify-content: center; /* Centers items vertically within the container*/
-  height: 100vh; /* Makes the container fill the full viewport height*/
-  width: 100vw; /* Makes the container span the full width of the viewport*/
+  min-height: 100vh; /* Makes the container fill the full viewport height*/
+  width: 100%; /* Makes the container span the full width of the viewport*/
   text-align: center; /* Center the text horizontally*/
   padding: 2rem; /*adds space inside the container on all sides */
   padding-top: 60px; /* Adds extra space at the top of th econtainer*/
-  background-image: url(images/hero.jpg); width: 100dvw; /* Sets the background image*/
+  background-image: url("images/hero.jpg"); /* Sets the background image*/
   background-size: cover; /*Makes the image cover the whole container*/
   background-position: center center; /*Keeps the image centered both ways*/
   background-repeat: no-repeat; /*Prevents the image from repeating */
