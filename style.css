@@ -92,7 +92,7 @@ background-color: #ffffff;        /* White background */
   text-align: center; 
 }
 
-/* HEADER SECTION STULES */
+/* HEADER SECTION STYLES */
 h1 {
   font-size: 2.5rem;
   color: #e6e6e6;
@@ -109,9 +109,9 @@ h2 {
   min-height: 100vh; /* Makes the container fill the full viewport height*/
   width: 100%; /* Makes the container span the full width of the viewport*/
   text-align: center; /* Center the text horizontally*/
-  padding: 2rem; /*adds space inside the container on all sides */
-  padding-top: 60px; /* Adds extra space at the top of th econtainer*/
-  background-image: url("images/hero.jpg"); /* Sets the background image*/
+  padding: 6rem; /*adds space inside the container on all sides */
+  padding-top: 10px; /* Adds extra space at the top of th econtainer*/
+  background-image: url("images/nexus6.png"); /* Sets the background image*/
   background-size: cover; /*Makes the image cover the whole container*/
   background-position: center center; /*Keeps the image centered both ways*/
   background-repeat: no-repeat; /*Prevents the image from repeating */
