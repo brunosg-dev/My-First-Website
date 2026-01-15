@@ -20,6 +20,9 @@
 </head>
 
 <body>
+
+  <!--This is the Navigation Section-->
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -34,12 +37,33 @@
 
   <div class="contact">
     <div class="contact-box">
-      <h2>Get In Touch</h2>
-      <form>
-        <label for="firstname">First Name</label>
-        <input type="text" id="firstname" name="firstname" value="David" />
-        <label for="surname">Surname</label>
-        <input type="text" id="surname" name="surname" value="Smith" />
+      <h2>Request Access to Nexus Script</h2>
+
+      <form action="form-handler.php" method="post">
+        <div class="name-fields">
+          <div>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" value="David" required />
+          </div>
+          <div>
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" value="Smith" required />
+          </div>
+        </div>
+
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" value="david.smith@example.com" required />
+
+        <label for="plan">Select Your Option</label>
+        <select id="plan" name="plan">
+          <option value="basic">Basic License - $49.99</option>
+          <option value="pro">Pro License - $99.99</option>
+          <option value="Lifetime">Lifetime Access - $299.99</option>
+        </select>
+
+        <label for="message">Additional Message</label>
+        <textarea id="message" name="message" rows="4" cols="50"
+          placeholder="Write any specific requests or questions here..."></textarea>
         <input type="submit" value="Submit" />
       </form>
     </div>
