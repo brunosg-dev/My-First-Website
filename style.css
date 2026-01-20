@@ -645,3 +645,55 @@ button:active,
   justify-content: center;
   padding-bottom: 15px;
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVE ADJUSTMENTS */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* TABLE SECTION */
+  .table-section {
+    margin: 40px 1rem;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 0.85rem;
+    width: 100%;
+    overflow-x: auto;
+    display: block; /* Prevents layout break */
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* Keeps text readable */
+  }
+
+  /* GET STARTED BUTTON */
+  .get-started-container-table {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .get-started-container-table button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-social {
+    margin-top: 15px;
+  }
+
+}
