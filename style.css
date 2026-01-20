@@ -602,3 +602,46 @@ button:active,
     font-size: 0.9rem;
   }
 }
+
+/* ============================= */
+/* TABLE STYLES                */ 
+/* ============================= */
+.table-section {
+  background-color: rgba(36, 29, 29, 0.95); /* Light transparent background */
+  border-radius: 8px;                       /* Rounded corners */
+  padding: 20px;                           /* Inner spacing */
+  margin: 60px auto 0 auto;                /* removes bottom spacing and centers */
+  max-width: 800px;                        /* Limits width for readability */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+.table-section h2 {
+  font-family: "Montserrat", sans-serif;   /* Clean modern font */
+  font-size: 24px;                         /* Larger title */
+  color: #e6e6e6 ;                         /* Light gray color */
+  margin-bottom: 20px;                     /* Space below title */
+  border-bottom: 2px solid #e6e6e6;       /* Underline for separation */
+  display: inline-block;                   /* Underline matches text width */
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;         /* Removes space between cells */
+  margin-top: 20px;
+}
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;            /* Light border for cells */
+  padding: 12px 15px;                /* Cell padding */
+  text-align: center;                 /* Centered text */
+  color: #e6e6e6;                   /* Light text color */
+}
+.pricing-note {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #b0b0b8;
+}
+.get-started-container-table {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
