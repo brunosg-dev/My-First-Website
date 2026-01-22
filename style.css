@@ -818,3 +818,133 @@ button:active,
     text-align: center;
   }
 } 
+
+/* ============================= */
+/*   THIS IS THE PLANS SECTION   */
+/* ============================= */
+
+
+/* Title container for the plans section */
+.plans-title-container {
+  text-align: center;                      /* Centers the title */
+  text-overflow: clip;                  /* Prevents overflow issues */
+  margin-top: 70px;                       /* Space above the title */
+  margin-bottom: 20px;                     /* Space below the title */
+  padding-bottom: 0;
+}
+.plans-title-container h2 {
+  font-family: "Montserrat", sans-serif;   /* Clean modern font */
+  font-size: 28px;                         /* Larger title */
+  color: #e6e6e6 ;                         /* Light gray color */
+  margin-bottom: 10px;                     /* Space below title */
+
+}
+
+.plans-title-container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #b0b0b8;
+  margin-top: 10px;
+  padding: 5px;
+  padding-bottom: 0;
+}
+
+
+/* Wrapper for the plan cards */
+.plans-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;              /* space between cards */
+  margin: 60px auto;
+  max-width: 1100px;
+}
+
+.plans-card {
+  background-color: rgba(36, 29, 29, 0.95); /* Light transparent background */
+  border-radius: 8px;                       /* Rounded corners */
+  padding: 20px;                           /* Inner spacing */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 300px;                            /* Fixed width for consistency */
+  text-align: center;                      /* Centered text */
+}
+
+.plans-card:hover {
+  transform: translateY(-6px);   /* Slight lift on hover */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Enhanced shadow */
+  transition: 0.3s ease;          /* Smooth transition */
+}
+
+
+.plans-wrapper h3 {
+  font-family: "Montserrat", sans-serif;   /* Clean modern font */
+  font-size: 20px;                         /* Larger title */
+  color: #e6e6e6 ;                         /* Light gray color */
+  margin-bottom: 15px;                     /* Space below title */
+  text-align: center;
+}
+/* Image card styles */
+.image-card {
+  width: 100%;
+  max-width: 280px;   /* controla o tamanho da imagem */
+  margin: 0 auto 20px auto; /* centraliza */
+  overflow: hidden;  /* corta o que sair do card */
+  border-radius: 8px;
+}
+.image-card img {
+  display: block;  /* remove espaços em branco indesejados */
+  width: 100%; /* faz a imagem ocupar toda a largura do card */
+  max-width: 100%; /* garante que a imagem não ultrapasse o card */
+  height: auto;   /* mantém a proporção */
+  border-radius: 6px;  /* Arredonda os cantos da imagem */
+  object-fit: cover;  /* cobre todo o espaço do card */
+}
+
+.plan-price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #23f75b;
+  margin-bottom: 6px; /* Space below price */
+  text-align: center;
+}
+
+.plans-button-container {
+  display: flex;
+  justify-content: center;
+}
+.plans-card ul{
+  margin-top: 15px;
+  padding-left: 20px; /* Adds space to the left for list items */
+}
+
+.plans-card li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start; /* Aligns text to the left */
+  color: #cfcfcf;
+  margin: 8px 0;
+}
+
+/*button inside the plan card*/
+.plans-card .btn {
+  background-color: #23f75b;
+  color: #000;
+  line-height: 1;        /* remove espaço vertical fantasma */
+  padding: 12px 28px;   /* controla o tamanho real */
+  height: auto;
+  margin-top: 6px;         /* override the global 1rem */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plans-card .btn:hover {
+  background-color: #7CFF8A;
+  color: #000;
+}
+/* green check */
+.plans-card li::before {
+  content: "✓";
+  color: #63ff6a;
+  font-weight: bold;
+}
