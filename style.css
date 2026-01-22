@@ -823,13 +823,28 @@ button:active,
 /*   THIS IS THE PLANS SECTION   */
 /* ============================= */
 
+/* PLANS HERO BACKGROUND IMAGE  */
+
+.plans-hero {
+  margin: 0;
+  padding: 0;
+  background-image: url("images/bg-plans.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.plans-overlay {
+  background: rgba(15, 13, 13, 0.75);
+  padding-top: 95px;   /* <-- aqui você ajusta (nav + respiro) */
+  padding-bottom: 170px; /* altura do hero */
+}
 
 /* Title container for the plans section */
 .plans-title-container {
   text-align: center;                      /* Centers the title */
   text-overflow: clip;                  /* Prevents overflow issues */
-  margin-top: 70px;                       /* Space above the title */
-  margin-bottom: 20px;                     /* Space below the title */
+  margin-bottom: 40px;                     /* Space below the title */
   padding-bottom: 0;
 }
 .plans-title-container h2 {
@@ -854,9 +869,9 @@ button:active,
 .plans-wrapper {
   display: flex;
   justify-content: center;
-  gap: 40px;              /* space between cards */
-  margin: 60px auto;
+  gap: 40px;
   max-width: 1100px;
+  margin: -170px auto 60px; /* <-- NEGATIVO faz sobrepor o hero */
 }
 
 .plans-card {
