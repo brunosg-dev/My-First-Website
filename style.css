@@ -1007,3 +1007,17 @@ button:active,
   line-height: 1.5;
   color: #b0b0b8;
 }
+
+/* ============================= */
+/* Hear from our customers section  */
+/* ============================= */
+
+.why-choose h3 {
+  font-size: 17px;
+  color: #e6e6e6;
+  margin-bottom: 30px;
+}
+
+.green-text {
+  color: #23f75b;
+}
