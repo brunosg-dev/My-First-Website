@@ -496,8 +496,8 @@ button,
   cursor: pointer;                    /* Pointer cursor on hover */
   font-family: "Montserrat", sans-serif;
   font-weight: 600;                   /* Bold for better readability */
-  color: #fff;                        /* Default text color */
-  background-color: rgba(36, 29, 29, 0.95); /* Default dark tone */
+  color: #040202;                        /* Default text color */
+  background-color: #23f75b; /* Default dark tone */
   transition: all 0.3s ease;          /* Smooth hover effects */
 }
 
@@ -533,7 +533,7 @@ button:active,
 }
 
 .shrink-border:hover {
-  background-color: #23f75b;          /* Change background on hover */
+  background-color: #7CFF8A;          /* Change background on hover */
   color: #000;                        /* Invert text color */
 }
 
@@ -1020,4 +1020,27 @@ button:active,
 
 .green-text {
   color: #23f75b;
+}
+
+.testimonial .quote-icon {
+  color: #23f75b;        /* green like reference */
+  font-size: 20px;
+  display: inline;
+  margin-bottom: 12px;
+  padding-right: 10px;
+}
+.testimonial .quote-icon.right {
+  font-size: 20px;
+  display: inline;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  position: relative;
+  top: 3px; /* pushes it down slightly */
+}
+
+.author {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #b0b0b8;
 }
