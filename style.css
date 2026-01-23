@@ -963,3 +963,40 @@ button:active,
   color: #63ff6a;
   font-weight: bold;
 }
+
+/* ============================= */
+/*   WHY CHOOSE SECTION          */
+/* ============================= */
+
+.why-choose {
+  margin-top: 50px; /* pushes this section DOWN */
+  text-align: center;
+}
+
+/* stop this section from pulling upward */
+.why-choose .plans-wrapper {
+  margin-top: 40px !important;
+  transform: none !important;
+}
+
+/* keep cards but soften them */
+.why-choose .plans-card {
+  width: 280px;
+  padding: 30px 20px;
+}
+.why-choose h2 {
+  font-size: 26px;
+  color: #e6e6e6;
+  margin-bottom: 10px;
+}
+/* smaller headings */
+.why-choose h3 {
+  font-size: 18px;
+}
+
+/* smaller paragraph like h4 style */
+.why-choose p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b0b0b8;
+}
