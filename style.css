@@ -1050,6 +1050,13 @@ button:active,
 .why-choose h3 {
   font-size: 18px;
 }
+/* Card Icones */
+.card-icon {
+  font-size: 26px;
+  color: #23f75b;
+  margin-bottom: 12px;
+  display: block;
+}
 
 /* smaller paragraph like h4 style */
 .why-choose p {
