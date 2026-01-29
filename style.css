@@ -932,6 +932,7 @@ button:active,
 }
 
 .plans-card {
+  position: relative; /* added for most popular styling */
   background-color: rgba(36, 29, 29, 0.95); /* Light transparent background */
   border-radius: 8px;                       /* Rounded corners */
   padding: 20px;                           /* Inner spacing */
@@ -954,6 +955,30 @@ button:active,
   margin-bottom: 15px;                     /* Space below title */
   text-align: center;
 }
+
+/* Most poular styling */
+.plans-card.popular {
+  border: 1px solid #7CFF6B;
+}
+
+.badge {
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%); 
+  position: absolute;
+  background: #7CFF6B;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.plans-card.popular:hover .badge {
+  box-shadow: 0 0 12px rgba(124, 255, 107, 0.6);
+}
+
+
 /* Image card styles */
 .image-card {
   width: 100%;
