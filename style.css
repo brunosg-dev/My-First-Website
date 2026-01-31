@@ -473,8 +473,8 @@ color: #23f75b;
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
    border: 1px solid rgba(0, 0, 0, 0.05); /* Light border for definition */
-  max-width: 640px; /* Wider on large screens */
-  width: min(100%, 640px); /* Fill small screens, cap on large */
+  max-width: 380px; /* Limits width for better readability */
+  width: 100%; /* Full width on smaller screens */
   text-align: left; /* Left-aligns text inside the box */
 }
 
@@ -1071,7 +1071,6 @@ button:active,
   margin-top: 50px; /* pushes this section DOWN */
   text-align: center;
 }
-
 /* stop this section from pulling upward */
 .why-choose .plans-wrapper {
   margin-top: 40px !important;
