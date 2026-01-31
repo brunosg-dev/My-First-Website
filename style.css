@@ -32,7 +32,11 @@ html, body {
   align-items: center;
   gap: 2px;     /* controla a distância logo ↔ texto */
 }
-
+.logo-container a { /* Makes Logo clikable */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
 .logo-container img {
   height: 40px;   /* menor para não aumentar a barra */
 }
@@ -43,9 +47,6 @@ html, body {
   color: #e6e6e6;
 }
 
-.text-space {
-  
-}
 nav {
   position: fixed;
   top: 0;
@@ -94,7 +95,6 @@ nav a {
 /*let's add a hand when passing the mouse over the letters*/
 nav a:hover {
 color: #23f75b;
-border-bottom: 2px solid #820c8d;
 }
 
 #modernparagraph {
@@ -977,7 +977,6 @@ button:active,
 .plans-card.popular:hover .badge {
   box-shadow: 0 0 12px rgba(124, 255, 107, 0.6);
 }
-
 
 /* Image card styles */
 .image-card {
