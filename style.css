@@ -133,7 +133,8 @@ background-color: #ffffff;        /* White background */
   text-align: center; 
 }
 /* ============================= */
-/* MOBILE RESPONSIVE ADJUSTMENTS */
+/* GLOBAL MEDIA QUERIES */
+/* ============================= */
 /* Mobile responsiveness for navigation and containers */
 
 @media (max-width: 768px) {
@@ -947,6 +948,7 @@ button:active,
   gap: 40px;
   max-width: 1100px;
   margin: -170px auto 60px; /* <-- NEGATIVO faz sobrepor o hero */
+  flex-wrap: wrap; /* allow wrapping to prevent mobile overflow */
 }
 
 .plans-card {
@@ -1105,6 +1107,22 @@ button:active,
   font-size: 14px;
   line-height: 1.5;
   color: #b0b0b8;
+}
+
+/* ============================= */
+/* PLANS SECTION — MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+  .plans-wrapper {
+    margin: -120px auto 40px;
+    padding: 0 1rem;
+    gap: 20px;
+  }
+
+  .plans-card {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* ============================= */
