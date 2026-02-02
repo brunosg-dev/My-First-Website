@@ -90,15 +90,24 @@ nav a {
   font-size: 16px;
   color: aliceblue;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
   border-bottom: 5px solid transparent;
   padding-bottom: 5px;
   position: relative;
-  padding: 10px 10px;
+  padding: 10px 16px;
 }
-/*let's add a hand when passing the mouse over the letters*/
+/*Active nav link: pill style to show the current page*/
+nav a.active {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+/*Hover state: subtle highlight that matches the active pill*/
 nav a:hover {
-color: #23f75b;
+  color: #23f75b;
+  background: rgba(35, 247, 91, 0.12);
+  border-radius: 20px;
 }
 
 #modernparagraph {
