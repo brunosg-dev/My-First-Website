@@ -15,6 +15,12 @@ body {
   font-family: "Montserrat", sans-serif; /* Consistent modern font */
   position: relative;
 }
+
+body.contact-page {
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 230, 255, 0.15), transparent 60%),
+              radial-gradient(900px 500px at 90% 0%, rgba(35, 247, 91, 0.18), transparent 55%),
+              linear-gradient(180deg, #0b0e12 0%, #151318 55%, #1a1a1f 100%);
+}
 * {
   margin: 0;
   padding: 0;
@@ -279,7 +285,7 @@ h2 {
   bottom: 0; /* Stretches it to the bootm edge*/
   background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black overlay */
   z-index: 0;/* Places it behind other content (lower stacking order) */
-  background: linear-gradient(180deg, rgba(15, 11, 11, 0.468) , #2d282a); /* Gradient from semi-transparent to solid to match colours */
+  background: linear-gradient(180deg, rgba(11, 14, 18, 0.6), rgba(21, 19, 24, 0.9)); /* Match new AI theme */
   padding-top: 10px;   /* <-- aqui você ajusta (nav + respiro) */
   padding-bottom: 170px; /* altura do hero */
 }
@@ -328,7 +334,9 @@ h2 {
 /* ============================= */
 
 footer {
-  background-color: rgba(36, 29, 29, 0.95);
+  background: linear-gradient(180deg, rgba(11, 14, 18, 0.75), rgba(21, 19, 24, 0.95));
+  border-top: 1px solid var(--ai-stroke);
+  backdrop-filter: blur(8px);
   padding: 40px 0;
   color: #e6e6e6;
 }
@@ -523,7 +531,7 @@ color: #23f75b;
   justify-content: center; /* Centers the contact section horizontally */
   align-items: center; /* Centers the contact section vertically */
   min-height: 90vh; /* Ensures it takes up most of the viewport height */
-  background-color: rgba(36, 29, 29, 0.95); /* Matches overall site theme */
+  background: transparent; /* Let global AI background show through */
   padding-top: calc(70px + 2rem); /* Offset fixed nav height */
   padding-inline: 15rem; /* Extra space on the sides for larger screens */
   padding-bottom: 0; /* Removes bottom padding */
@@ -977,7 +985,7 @@ button:active,
 
 .plans-overlay {
   /*background: rgba(15, 13, 13, 1);*/
-  background: linear-gradient(180deg, rgba(15, 11, 11, 0.468) , #2d282a); /* Gradient from semi-transparent to solid to match colours */
+  background: linear-gradient(180deg, rgba(11, 14, 18, 0.6), rgba(21, 19, 24, 0.9)); /* Match new AI theme */
   padding-top: 95px;   /* <-- aqui você ajusta (nav + respiro) */
   padding-bottom: 170px; /* altura do hero */
 }
