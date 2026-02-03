@@ -308,6 +308,7 @@ footer {
 /*Footer copyright spacing: separates the copyright line from links*/
 .footer-content p {
   margin-bottom: 16px;
+  line-height: 1.6;
 }
 
 .footer-links {
