@@ -7,6 +7,29 @@
   --ai-stroke: rgba(35, 247, 91, 0.18);
 }
 
+:root {
+  --fx-x1: 20%;
+  --fx-y1: 120%;
+  --fx-x2: 80%;
+  --fx-y2: 140%;
+}
+
+@keyframes global-fx-motion {
+  0% {
+    --fx-x1: 10%;
+    --fx-y1: 120%;
+    --fx-x2: 90%;
+    --fx-y2: 140%;
+  }
+  100% {
+    --fx-x1: 120%;
+    --fx-y1: -20%;
+    --fx-x2: -10%;
+    --fx-y2: 20%;
+  }
+}
+
+
 body {
   background: radial-gradient(1200px 600px at 10% -10%, rgba(0, 230, 255, 0.15), transparent 60%),
               radial-gradient(900px 500px at 90% 0%, rgba(35, 247, 91, 0.18), transparent 55%),
@@ -42,15 +65,81 @@ body::before {
   inset: 0;
   background:
     repeating-linear-gradient(90deg, rgba(0, 230, 255, 0.06) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(0deg, rgba(35, 247, 91, 0.05) 0 1px, transparent 1px 80px);
+    repeating-linear-gradient(0deg, rgba(35, 247, 91, 0.05) 0 1px, transparent 1px 80px),
+    linear-gradient(180deg, transparent 0%, rgba(0, 230, 255, 0.18) 48%, transparent 58%);
+  background-size: 80px 80px, 80px 80px, 100% 220px;
+  background-position: 0 0, 0 0, 0 -220px;
+  background-repeat: repeat, repeat, repeat;
   opacity: 0.6;
   pointer-events: none;
   z-index: 0;
+  animation: grid-scan 12s linear infinite;
+}
+
+/* Starfield + comet overlay (single global layer) */
+:root {
+  --stellar-field: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360' viewBox='0 0 520 360'%3E%3Cdefs%3E%3Cfilter id='s'%3E%3CfeGaussianBlur stdDeviation='0.3'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23s)' fill='rgba(255,255,255,0.65)'%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3Ccircle cx='120' cy='70' r='1.2'/%3E%3Ccircle cx='210' cy='30' r='0.8'/%3E%3Ccircle cx='300' cy='90' r='1'/%3E%3Ccircle cx='470' cy='50' r='0.9'/%3E%3Ccircle cx='80' cy='170' r='1.1'/%3E%3Ccircle cx='190' cy='150' r='0.7'/%3E%3Ccircle cx='260' cy='200' r='1.3'/%3E%3Ccircle cx='360' cy='160' r='0.8'/%3E%3Ccircle cx='440' cy='210' r='1'/%3E%3Ccircle cx='60' cy='300' r='0.9'/%3E%3Ccircle cx='160' cy='260' r='1.2'/%3E%3Ccircle cx='250' cy='310' r='0.7'/%3E%3Ccircle cx='340' cy='280' r='1.1'/%3E%3Ccircle cx='480' cy='300' r='0.9'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Global sparkle layer for all pages */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -8%;
+  background-image: var(--stellar-field);
+  background-size: 520px 360px;
+  background-position: 0 0;
+  background-repeat: repeat;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 1;
+  animation: currency-drift 32s linear infinite, currency-twinkle 6s ease-in-out infinite;
+}
+
+@keyframes currency-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -520px 0;
+  }
+}
+
+@keyframes currency-twinkle {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.32;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
+
+@keyframes grid-scan {
+  0% {
+    background-position: 0 0, 0 0, 0 -220px;
+  }
+  100% {
+    background-position: 0 0, 0 0, 0 100vh;
+  }
 }
 
 body > * {
   position: relative;
-  z-index: 1;
+  z-index: 0;
+}
+
+/* Lift content above the global FX layer without lifting section backgrounds */
+body > * > * {
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -102,6 +191,36 @@ nav {
   border-bottom: 1px solid var(--ai-stroke);
   backdrop-filter: blur(10px);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.45);
+  overflow: hidden; /* contain nav FX */
+}
+
+/* More transparent when at the very top */
+nav.nav-top {
+  background-color: rgba(15, 18, 24, 0.25);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Apply global FX to nav as well */
+nav::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0, 230, 255, 0.06) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(0deg, rgba(35, 247, 91, 0.05) 0 1px, transparent 1px 80px),
+    var(--stellar-field);
+  background-size: 80px 80px, 80px 80px, 520px 360px;
+  background-position: 0 0, 0 0, 0 0;
+  background-repeat: repeat, repeat, repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+  animation: grid-scan 12s linear infinite, currency-drift 32s linear infinite, currency-twinkle 6s ease-in-out infinite;
+}
+
+nav > * {
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -291,10 +410,9 @@ h2 {
   padding-bottom: 170px; /* altura do hero */
 }
 
-
 .container > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* ============================= */
@@ -997,6 +1115,12 @@ button:active,
   background: linear-gradient(180deg, rgba(11, 14, 18, 0.6), rgba(21, 19, 24, 0.9)); /* Match new AI theme */
   padding-top: 95px;   /* <-- aqui você ajusta (nav + respiro) */
   padding-bottom: 170px; /* altura do hero */
+  position: relative;
+}
+
+.plans-overlay > * {
+  position: relative;
+  z-index: 2;
 }
 
 
