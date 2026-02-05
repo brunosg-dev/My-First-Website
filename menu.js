@@ -8,10 +8,10 @@ toggle.addEventListener("click", () => {
 
 const updateNavTransparency = () => {
   if (!navbar) return;
-  if (window.scrollY <= 5) {
-    navbar.classList.add("nav-top");
+  if (window.scrollY > 5) {
+    navbar.classList.add("nav-scrolled");
   } else {
-    navbar.classList.remove("nav-top");
+    navbar.classList.remove("nav-scrolled");
   }
 };
 

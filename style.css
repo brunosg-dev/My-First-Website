@@ -187,17 +187,19 @@ nav {
   justify-content: space-between;
   padding: 0 40px;          /* espaço lateral */
   z-index: 1000;
-  background-color: rgba(15, 18, 24, 0.75);
-  border-bottom: 1px solid var(--ai-stroke);
+  background-color: rgba(15, 18, 24, 0.25);
+  border-bottom: 1px solid transparent;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
   overflow: hidden; /* contain nav FX */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* More transparent when at the very top */
-nav.nav-top {
-  background-color: rgba(15, 18, 24, 0.25);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+/* Stronger nav when scrolling */
+nav.nav-scrolled {
+  background-color: rgba(15, 18, 24, 0.75);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.45);
+  border-color: var(--ai-stroke);
 }
 
 /* Apply global FX to nav as well */
@@ -206,16 +208,30 @@ nav::after {
   position: absolute;
   inset: 0;
   background-image:
-    repeating-linear-gradient(90deg, rgba(0, 230, 255, 0.06) 0 1px, transparent 1px 80px),
-    repeating-linear-gradient(0deg, rgba(35, 247, 91, 0.05) 0 1px, transparent 1px 80px),
     var(--stellar-field);
-  background-size: 80px 80px, 80px 80px, 520px 360px;
-  background-position: 0 0, 0 0, 0 0;
-  background-repeat: repeat, repeat, repeat;
+  background-size: 520px 360px;
+  background-position: 0 0;
+  background-repeat: repeat;
   opacity: 0.25;
   pointer-events: none;
   z-index: 0;
-  animation: grid-scan 12s linear infinite, currency-drift 32s linear infinite, currency-twinkle 6s ease-in-out infinite;
+  animation: currency-drift 32s linear infinite, currency-twinkle 6s ease-in-out infinite;
+}
+
+/* Static grid layer for nav */
+nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0, 230, 255, 0.06) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(0deg, rgba(35, 247, 91, 0.05) 0 1px, transparent 1px 80px);
+  background-size: 80px 80px, 80px 80px;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
 }
 
 nav > * {
@@ -1112,7 +1128,7 @@ button:active,
 
 .plans-overlay {
   /*background: rgba(15, 13, 13, 1);*/
-  background: linear-gradient(180deg, rgba(11, 14, 18, 0.6), rgba(21, 19, 24, 0.9)); /* Match new AI theme */
+  background: linear-gradient(180deg, rgba(11, 14, 18, 0.6) 0%, rgba(21, 19, 24, 0.85) 65%, rgba(11, 14, 18, 0.96) 100%);
   padding-top: 95px;   /* <-- aqui você ajusta (nav + respiro) */
   padding-bottom: 170px; /* altura do hero */
   position: relative;
