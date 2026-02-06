@@ -33,12 +33,20 @@
     </button>
 
     <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="plans.html" class="active">Plans</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="plans.html" class="active" data-i18n="nav.plans">Plans</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
+    <div class="lang-switcher">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <select id="lang-select" aria-label="Language">
+        <option value="en-GB">English (UK)</option>
+        <option value="es-ES">Español (España)</option>
+        <option value="pt-BR">Português (Brasil)</option>
+      </select>
+    </div>
   </nav>
 
   <!---------------------------------->
@@ -49,10 +57,10 @@
   <section class="plans-hero">
     <div class="plans-overlay">
       <div class="plans-title-container">
-        <h2>Choose Your Plan</h2>
+        <h2 data-i18n="plans.hero.title">Choose Your Plan</h2>
         <p>
-          choose the plan that best fits your trading needs and<br>
-          start your journey with NexurTrade Script today!
+          <span data-i18n="plans.hero.subtitle.line1">choose the plan that best fits your trading needs and</span><br>
+          <span data-i18n="plans.hero.subtitle.line2">start your journey with NexurTrade Script today!</span>
         </p>
       </div>
     </div>
@@ -60,69 +68,77 @@
   <!-- Plans section Basic License -->
   <section class=plans-wrapper>
     <div class="plans-card">
-      <h3>Basic License</h3>
+      <h3 data-i18n="plans.basic.title">Basic License</h3>
       <div class="image-card">
         <img src="images/nexurtrade6.png" alt="NexurTrade Script Basic License">
       </div>
       <p class="plan-price">$49.99</p>
       <div class="plans-button-container">
-        <a href="contact.html"><button class="btn shrink-border">GET STARTED</button></a>
+        <a href="contact.html"><button class="btn shrink-border" data-i18n="plans.cta">GET STARTED</button></a>
       </div>
       <ul>
-        <li><span>Supertrend Indicator</span></li>
-        <li><span>ADX Indicator</span></li>
-        <li><span>Future Updates</span></li>
+        <li><span data-i18n="plans.features.supertrend">Supertrend Indicator</span></li>
+        <li><span data-i18n="plans.features.adx">ADX Indicator</span></li>
+        <li><span data-i18n="plans.features.updates">Future Updates</span></li>
       </ul>
     </div>
     <!-- Plans section Pro License -->
     <div class="plans-card popular">
-      <span class="badge">Best Value</span>
-      <h3>Pro License</h3>
+      <span class="badge" data-i18n="plans.pro.badge">Best Value</span>
+      <h3 data-i18n="plans.pro.title">Pro License</h3>
       <div class="image-card">
         <img src="images/nexurtrade6.png" alt="NexurTrade Script Pro License">
       </div>
       <p class="plan-price">$99.99</p>
       <div class="plans-button-container">
-        <a href="contact.html"><button class="btn shrink-border">GET STARTED</button></a>
+        <a href="contact.html"><button class="btn shrink-border" data-i18n="plans.cta">GET STARTED</button></a>
       </div>
       <ul>
-        <li>Supertrend Indicator</li>
-        <li>ADX Indicator</li>
-        <li>Future Updates</li>
-        <li>Priority Email Support</li>
+        <li data-i18n="plans.features.supertrend">Supertrend Indicator</li>
+        <li data-i18n="plans.features.adx">ADX Indicator</li>
+        <li data-i18n="plans.features.updates">Future Updates</li>
+        <li data-i18n="plans.features.priority">Priority Email Support</li>
       </ul>
     </div>
   </section>
 
   <!--Why Choose NexurTrade Script Section-->
   <section class="why-choose">
-    <h2>Why Choose NexurTrade Script?</h2>
+    <h2 data-i18n="plans.why.title">Why Choose NexurTrade Script?</h2>
     <div class=plans-wrapper>
       <div class="plans-card">
         <i class="fa-solid fa-bell card-icon"></i>
-        <h3>Early Alerts</h3>
-        <p>Receive timely notifications before market shifts, allowing you to act with confidence and precision.</p>
+        <h3 data-i18n="plans.why.alerts.title">Early Alerts</h3>
+        <p data-i18n="plans.why.alerts.body">Receive timely notifications before market shifts, allowing you to act with confidence and precision.</p>
       </div>
 
       <div class="plans-card">
         <i class="fa-solid fa-gears card-icon"></i>
-        <h3>Automation</h3>
-        <p>Let the system handle repetitive tasks automatically, saving you time and effort.</p>
+        <h3 data-i18n="plans.why.automation.title">Automation</h3>
+        <p data-i18n="plans.why.automation.body">Let the system handle repetitive tasks automatically, saving you time and effort.</p>
       </div>
 
       <div class="plans-card">
         <i class="fa-solid fa-chart-line card-icon"></i>
-        <h3>Precise Tracking</h3>
-        <p>Monitor your trades and performance with detailed analytics and real-time updates.</p>
+        <h3 data-i18n="plans.why.tracking.title">Precise Tracking</h3>
+        <p data-i18n="plans.why.tracking.body">Monitor your trades and performance with detailed analytics and real-time updates.</p>
       </div>
     </div>
     <!--User Testimonials Section-->
-    <h3><span class="green-text">HEAR FROM</span> OUR USERS</h3>
-    <p class="testimonial"><i class="fa-solid fa-quote-left quote-icon"></i>NexurTrade Script has transformed my trading
-      experience. <br>The early alerts and automation features have saved me time
-      and <br>increased my profits significantly. Highly recommended!<i
-        class="fa-solid fa-quote-right quote-icon right"></i>
-      <br><span class="author"><strong>Mark L..</strong> Active Trader</span>
+    <h3>
+      <span class="green-text" data-i18n="plans.testimonial.hearFrom">HEAR FROM</span>
+      <span data-i18n="plans.testimonial.ourUsers">OUR USERS</span>
+    </h3>
+    <p class="testimonial">
+      <i class="fa-solid fa-quote-left quote-icon"></i>
+      <span data-i18n="plans.testimonial.body1">NexurTrade Script has transformed my trading experience.</span>
+      <br>
+      <span data-i18n="plans.testimonial.body2">The early alerts and automation features have saved me time and increased my profits significantly.</span>
+      <br>
+      <span data-i18n="plans.testimonial.body3">Highly recommended!</span>
+      <i class="fa-solid fa-quote-right quote-icon right"></i>
+      <br>
+      <span class="author"><strong>Mark L..</strong> <span data-i18n="plans.testimonial.role">Active Trader</span></span>
     </p>
     <br>
     <br>
@@ -132,13 +148,13 @@
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2025 NexurTrade. All rights reserved</p>
+      <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
       <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html" class="active">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" class="active" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
       <p class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>

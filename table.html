@@ -32,66 +32,74 @@
         </button>
 
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html" class="active">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" class="active" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
         </ul>
+        <div class="lang-switcher">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <select id="lang-select" aria-label="Language">
+                <option value="en-GB">English (UK)</option>
+                <option value="es-ES">Español (España)</option>
+                <option value="pt-BR">Português (Brasil)</option>
+            </select>
+        </div>
     </nav>
 
     <!-- this is the table section -->
     <section class="table-section">
-        <h2>Comparison of NexurTrade Script Plans</h2>
+        <h2 data-i18n="table.title">Comparison of NexurTrade Script Plans</h2>
         <table class="comparison-table">
             <tr>
-                <th>Feature</th>
-                <th>Basic License</th>
-                <th>Pro License</th>
+                <th data-i18n="table.header.feature">Feature</th>
+                <th data-i18n="table.header.basic">Basic License</th>
+                <th data-i18n="table.header.pro">Pro License</th>
             </tr>
             <tr>
-                <td>Price</td>
+                <td data-i18n="table.row.price">Price</td>
                 <td>$49.99</td>
                 <td>$99.99</td>
             </tr>
             <tr>
-                <td>Access to Supertrend Indicator</td>
-                <td>Included</td>
-                <td>Included</td>
+                <td data-i18n="table.row.supertrend">Access to Supertrend Indicator</td>
+                <td data-i18n="table.value.included">Included</td>
+                <td data-i18n="table.value.included">Included</td>
             </tr>
             <tr>
-                <td>Access to ADX Indicator</td>
-                <td>Included</td>
-                <td>Included</td>
+                <td data-i18n="table.row.adx">Access to ADX Indicator</td>
+                <td data-i18n="table.value.included">Included</td>
+                <td data-i18n="table.value.included">Included</td>
             </tr>
             <tr>
-                <td>Priority Email Support</td>
-                <td>No</td>
-                <td>Yes</td>
+                <td data-i18n="table.row.priority">Priority Email Support</td>
+                <td data-i18n="table.value.no">No</td>
+                <td data-i18n="table.value.yes">Yes</td>
             </tr>
             <tr>
-                <td>Access to Future Updates</td>
-                <td>Yes</td>
-                <td>Yes</td>
+                <td data-i18n="table.row.updates">Access to Future Updates</td>
+                <td data-i18n="table.value.yes">Yes</td>
+                <td data-i18n="table.value.yes">Yes</td>
             </tr>
         </table>
     </section>
     <div class="get-started-container-table">
         <div class="button-container">
-            <a href="contact.html"><button class="btn shrink-border">Get Started</button></a>
+            <a href="contact.html"><button class="btn shrink-border" data-i18n="table.cta">Get Started</button></a>
         </div>
     </div>
     <!-- This is the footer section -->
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 NexurTrade. All rights reserved</p>
+            <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
             <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html" class="active">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" class="active" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
             </ul>
             <p class="footer-social">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>

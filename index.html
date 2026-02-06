@@ -32,23 +32,31 @@
       </button>
 
       <ul class="nav-links">
-         <li><a href="index.html" class="active">Home</a></li>
-         <li><a href="plans.html">Plans</a></li>
-         <li><a href="about.html">About Us</a></li>
-         <li><a href="gallery.html">Gallery</a></li>
-         <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+         <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+         <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+         <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+         <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
+      <div class="lang-switcher">
+         <i class="fa-solid fa-globe" aria-hidden="true"></i>
+         <select id="lang-select" aria-label="Language">
+            <option value="en-GB">English (UK)</option>
+            <option value="es-ES">Español (España)</option>
+            <option value="pt-BR">Português (Brasil)</option>
+         </select>
+      </div>
    </nav>
 
    <!--this is the header section-->
    <div class="container">
       <div class="header-content">
-         <h1>Welcome to NexurTrade</h1>
-         <h2>Automate your trading. Master the strategy. Multiply your results.</h2>
+         <h1 data-i18n="home.hero.title">Welcome to NexurTrade</h1>
+         <h2 data-i18n="home.hero.subtitle">Automate your trading. Master the strategy. Multiply your results.</h2>
       </div>
       <div class="button-container">
-         <a href="contact.html"><button class="btn shrink-border">Get Started</button></a>
-         <a href="table.html"><button class="btn shrink-border">View Plans</button></a>
+         <a href="contact.html"><button class="btn shrink-border" data-i18n="home.hero.ctaPrimary">Get Started</button></a>
+         <a href="table.html"><button class="btn shrink-border" data-i18n="home.hero.ctaSecondary">View Plans</button></a>
       </div>
 
    </div>
@@ -57,8 +65,8 @@
    <!-- This is the discovery Section -->
 
    <section class="chapter-section">
-      <h2 class="h2-discovery">Discover NexurTrade Script</h2>
-      <p>Sail through your sessions with NexurTrade Script’s clean, early candle triggers, automatic hour checkpoints,
+      <h2 class="h2-discovery" data-i18n="home.discovery.title">Discover NexurTrade Script</h2>
+      <p data-i18n="home.discovery.body">Sail through your sessions with NexurTrade Script’s clean, early candle triggers, automatic hour checkpoints,
          and
          smart GALE tracking.
          Each alert is curated for clarity, helping you act with confidence and stay disciplined.
@@ -70,13 +78,13 @@
 
    <footer>
       <div class="footer-content">
-         <p>&copy; 2025 NexurTrade. All rights reserved</p>
+         <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
          <ul class="footer-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="plans.html">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
          </ul>
          <p class="footer-social">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>

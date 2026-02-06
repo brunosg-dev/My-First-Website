@@ -248,6 +248,8 @@ nav ul {
   gap: 25px;
   margin: 0 auto;     /* mantém no centro */
   padding: 0;
+  flex: 1;
+  justify-content: center;
 }
 
 
@@ -281,6 +283,27 @@ nav a:hover {
   color: var(--ai-green);
   background: rgba(35, 247, 91, 0.12);
   border-radius: 20px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-switcher i {
+  color: var(--ai-cyan);
+  font-size: 16px;
+}
+
+.lang-switcher select {
+  background: rgba(15, 18, 24, 0.7);
+  color: #e6e6e6;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: 14px;
+  outline: none;
 }
 
 /*Footer active link: matches nav pill but slightly lighter for footer context*/
@@ -370,6 +393,11 @@ background-color: #ffffff;        /* White background */
 
   .nav-links a {
     font-size: 14px;
+  }
+
+  .lang-switcher select {
+    font-size: 12px;
+    padding: 5px 8px;
   }
 }
 

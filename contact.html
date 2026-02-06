@@ -33,12 +33,20 @@
     </button>
 
     <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="plans.html">Plans</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+    <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
+    <div class="lang-switcher">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <select id="lang-select" aria-label="Language">
+        <option value="en-GB">English (UK)</option>
+        <option value="es-ES">Español (España)</option>
+        <option value="pt-BR">Português (Brasil)</option>
+      </select>
+    </div>
   </nav>
 
   <!-- this is the contact section -->
@@ -46,37 +54,37 @@
   <div class="contact">
     <div class="contact-box">
       <p class="pricing-note">
-        Not sure which plan fits your needs?
-        <a href="table.html">Compare NexurTrade Script Plans</a>
+        <span data-i18n="contact.note">Not sure which plan fits your needs?</span>
+        <a href="table.html" data-i18n="contact.compareLink">Compare NexurTrade Script Plans</a>
       </p>
-      <h2>Request Access to NexurTrade Script</h2>
+      <h2 data-i18n="contact.title">Request Access to NexurTrade Script</h2>
 
       <form action="form-handler.php" method="post">
         <div class="name-fields">
           <div>
-            <label for="firstname">First Name</label>
-            <input type="text" id="firstname" name="firstname" placeholder="David" required />
+            <label for="firstname" data-i18n="contact.firstName">First Name</label>
+            <input type="text" id="firstname" name="firstname" placeholder="David" data-i18n-placeholder="contact.firstName.placeholder" required />
           </div>
           <div>
-            <label for="surname">Surname</label>
-            <input type="text" id="surname" name="surname" placeholder="Smith" required />
+            <label for="surname" data-i18n="contact.surname">Surname</label>
+            <input type="text" id="surname" name="surname" placeholder="Smith" data-i18n-placeholder="contact.surname.placeholder" required />
           </div>
         </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="david.smith@example.com" required />
+        <label for="email" data-i18n="contact.email">Email</label>
+        <input type="email" id="email" name="email" placeholder="david.smith@example.com" data-i18n-placeholder="contact.email.placeholder" required />
 
-        <label for="plan">Select Your Option</label>
+        <label for="plan" data-i18n="contact.plan">Select Your Option</label>
         <select id="plan" name="plan">
-          <option value="basic">Basic License - $49.99</option>
-          <option value="pro">Pro License - $99.99</option>
-          <option value="Lifetime">Lifetime Access - $299.99</option>
+          <option value="basic" data-i18n="contact.plan.basic">Basic License - $49.99</option>
+          <option value="pro" data-i18n="contact.plan.pro">Pro License - $99.99</option>
+          <option value="Lifetime" data-i18n="contact.plan.lifetime">Lifetime Access - $299.99</option>
         </select>
 
-        <label for="message">Additional Message</label>
+        <label for="message" data-i18n="contact.message">Additional Message</label>
         <textarea id="message" name="message" rows="4" cols="50"
-          placeholder="Write any specific requests or questions here..."></textarea>
-        <input type="submit" value="Submit" />
+          placeholder="Write any specific requests or questions here..." data-i18n-placeholder="contact.message.placeholder"></textarea>
+        <input type="submit" value="Submit" data-i18n-value="contact.submit" />
       </form>
     </div>
   </div>
@@ -85,13 +93,13 @@
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2025 NexurTrade. All rights reserved</p>
+      <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
       <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html" class="active">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
       <p class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>

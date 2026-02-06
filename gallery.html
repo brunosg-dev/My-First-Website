@@ -33,49 +33,57 @@
     </button>
 
     <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="plans.html">Plans</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="gallery.html" class="active">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+    <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+    <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Gallery</a></li>
+    <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
+    <div class="lang-switcher">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <select id="lang-select" aria-label="Language">
+        <option value="en-GB">English (UK)</option>
+        <option value="es-ES">Español (España)</option>
+        <option value="pt-BR">Português (Brasil)</option>
+      </select>
+    </div>
   </nav>
 
   <!-- This is the Gallery area -->
   <div class="gallery-container">
-    <h2>NexurTrade Pictures Gallery</h2>
+    <h2 data-i18n="gallery.title">NexurTrade Pictures Gallery</h2>
     <div class="gallery-grid">
       <figure class="plans-card">
         <a href="images/gallery1.png" data-lightbox="gallery"
-          data-title="EUR/USD Analysis — Identifying Key Reversal Points">
+          data-title="EUR/USD Analysis — Identifying Key Reversal Points" data-i18n-title="gallery.item1.title">
           <img src="images/gallery1.png"
             alt="EUR/USD chart showing bullish and bearish candles with trading indicators active" />
         </a>
-        <figcaption>EUR/USD trend reversal with NexurTrade Script.</figcaption>
+        <figcaption data-i18n="gallery.item1.caption">EUR/USD trend reversal with NexurTrade Script.</figcaption>
       </figure>
 
       <figure class="plans-card">
-        <a href="images/gallery2.png" data-lightbox="gallery" data-title="EUR/JPY Setup — Trend Continuation Example">
+        <a href="images/gallery2.png" data-lightbox="gallery" data-title="EUR/JPY Setup — Trend Continuation Example" data-i18n-title="gallery.item2.title">
           <img src="images/gallery2.png" alt="EUR/JPY chart with trendlines and buy-sell signals highlighted" />
         </a>
-        <figcaption>EUR/JPY trend continuation setup.</figcaption>
+        <figcaption data-i18n="gallery.item2.caption">EUR/JPY trend continuation setup.</figcaption>
       </figure>
 
       <figure class="plans-card">
         <a href="images/gallery3.png" data-lightbox="gallery"
-          data-title="GBP/JPY Entry Timing — Precision Candle Reading">
+          data-title="GBP/JPY Entry Timing — Precision Candle Reading" data-i18n-title="gallery.item3.title">
           <img src="images/gallery3.png"
             alt="GBP/JPY digital chart showing red and green candles with moving averages" />
         </a>
-        <figcaption>GBP/JPY entry timing using NexurTrade Script.</figcaption>
+        <figcaption data-i18n="gallery.item3.caption">GBP/JPY entry timing using NexurTrade Script.</figcaption>
       </figure>
 
       <figure class="plans-card">
         <a href="images/gallery4.png" data-lightbox="gallery"
-          data-title="GBP/JPY Signal Confirmation — Multi-Indicator Strategy">
+          data-title="GBP/JPY Signal Confirmation — Multi-Indicator Strategy" data-i18n-title="gallery.item4.title">
           <img src="images/gallery4.png" alt="GBP/JPY trade overview with multiple signal confirmations" />
         </a>
-        <figcaption>GBP/JPY multi-indicator signal confirmation.</figcaption>
+        <figcaption data-i18n="gallery.item4.caption">GBP/JPY multi-indicator signal confirmation.</figcaption>
       </figure>
 
       <figure class="plans-card">
@@ -161,13 +169,13 @@
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2025 NexurTrade. All rights reserved</p>
+      <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
       <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html">Plans</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html" class="active">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" class="active" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
       <p class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>

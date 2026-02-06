@@ -32,12 +32,20 @@
     </button>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="plans.html">Plans</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+      <li><a href="about.html" class="active" data-i18n="nav.about">About Us</a></li>
+      <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
+    <div class="lang-switcher">
+      <i class="fa-solid fa-globe" aria-hidden="true"></i>
+      <select id="lang-select" aria-label="Language">
+        <option value="en-GB">English (UK)</option>
+        <option value="es-ES">Español (España)</option>
+        <option value="pt-BR">Português (Brasil)</option>
+      </select>
+    </div>
   </nav>
 
   <!-- this is the about section -->
@@ -45,17 +53,17 @@
     <div class="column"><img src="images/nexurtradelogo.jpg" alt="About NexurTrade Script"></div>
     <div class="column">
       <section class="about-section">
-        <h2>About NexurTrade Script</h2>
+        <h2 data-i18n="about.title">About NexurTrade Script</h2>
         <br>
-        <p>NexurTrade Script is the brainchild of Bruno Silva Gomes, a seasoned trader with over a decade of experience in
+        <p data-i18n="about.p1">NexurTrade Script is the brainchild of Bruno Silva Gomes, a seasoned trader with over a decade of experience in
           binary options trading. Frustrated by the lack of reliable tools in the market, Bruno set out to create a
           solution that would empower traders to make informed decisions with confidence.</p>
         <br>
-        <p>Since its inception, NexurTrade Script has evolved into a comprehensive trading system that combines advanced
+        <p data-i18n="about.p2">Since its inception, NexurTrade Script has evolved into a comprehensive trading system that combines advanced
           indicators, user-friendly interfaces, and robust support. Our mission is to help traders of all levels achieve
           consistent success in the fast-paced world of binary options.</p>
         <br>
-        <p>At NexurTrade Script, we believe that trading is not just about luck; it's about strategy, discipline, and the
+        <p data-i18n="about.p3">At NexurTrade Script, we believe that trading is not just about luck; it's about strategy, discipline, and the
           right
           tools. Join us on this journey to elevate your trading experience and unlock your full potential.</p>
       </section>
@@ -64,11 +72,11 @@
 
   <!-- This is the call to action section -->
   <section class="cta-section-about">
-    <h2>
+    <h2 data-i18n="about.cta.title">
       Ready to start your trading journey with NexurTrade Script?
     </h2>
     <div class="button-container">
-      <a href="contact.html"><button class="btn shrink-border">Get Started</button></a>
+      <a href="contact.html"><button class="btn shrink-border" data-i18n="about.cta.button">Get Started</button></a>
     </div>
   </section>
 
@@ -76,13 +84,13 @@
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2025 NexurTrade. All rights reserved</p>
+      <p data-i18n="footer.copyright">© 2025 NexurTrade. All rights reserved</p>
       <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="plans.html">Plans</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="plans.html" data-i18n="nav.plans">Plans</a></li>
+            <li><a href="about.html" class="active" data-i18n="nav.about">About Us</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
       </ul>
       <p class="footer-social">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
